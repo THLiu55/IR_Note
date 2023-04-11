@@ -9,7 +9,7 @@ def printFileByLine(path):
             line = f.readline()
 
 
-def printFileByLineWithParenthese(path):
+def printFileByLineWithParentheses(path):
     with open(path, 'r') as f:
         line = f.readline()
         while line is not None:
@@ -18,7 +18,7 @@ def printFileByLineWithParenthese(path):
             line = f.readline()
 
 
-def printFileByLineWithParentheseLower(path):
+def printFileByLineWithParenthesesLower(path):
     with open(path, 'r') as f:
         line = f.readline()
         while line is not None:
