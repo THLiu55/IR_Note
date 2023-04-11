@@ -6,7 +6,7 @@
 #
 ###
 
-filename = 'index.txt'
+filename = '../index.txt'
 
 # merge two postings lists, return the INTERSECTION
 #    i.e. those documents that are in list1 AND in list2
