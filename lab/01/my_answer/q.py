@@ -30,12 +30,14 @@ def printFileByLineWithParentheseLower(path):
 class Statistics:
     def __init__(self, path):
         self.map = dict()
-        self.ordered_map = []
         with open(path, 'r') as f:
-            line = f.readline()
-            while line is not None:
-                for word in line.strip('\n').split(" "):
-                    self.map[word] = 1 if word not in self.map else self.map[word] + 1
+            for line in f:
+                for word in line.strip('\n').split():
+                    word = word.lower()
+                    if word in self.map:
+                        self.map[word] += 1
+                    else:
+                        self.map[word] = 1
 
     def show_map(self):
         print('--------------------')
@@ -46,10 +48,11 @@ class Statistics:
     def show_map_in_order(self):
         print('--------------------')
         for key in sorted(self.map.keys(), key=self.map.get, reverse=True):
-            print(f"{key}")
+            print(f"{key}:     {self.map[key]}")
         print('--------------------')
 
 
 if __name__ == "__main__":
     s = Statistics(path=filepath)
     s.show_map()
+    s.show_map_in_order()

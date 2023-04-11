@@ -147,4 +147,4 @@ def compare(list1, list2):
 
 if __name__ == '__main__':
     s = Solution('../index.txt')
-    print(s.complex_query('( ( ( consists AND experimental AND gases ) ) )'))
+    print(s.complex_query('( ( dawn AND ( energy OR large ) ) )'))
